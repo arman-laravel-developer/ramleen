@@ -52,7 +52,7 @@
                     @endforeach
                 </div>
             </div>
-        </div>        
+        </div>
     </section>
     <!-- /Home Slider -->
     <section class="notice-section">
@@ -100,6 +100,7 @@
         </div>
     </section>
     <!-- /Banner -->
+    @if(count($hot_products) > 0)
     <!-- Popular Product -->
     <section class="product-section">
         <div class="container">
@@ -131,7 +132,7 @@
                             @if ($product->is_variable == true)
                             <a href="{{url('variable-product/'.$product->slug)}}" class="product-name">
                             @else
-                            <a href="{{url('product/'.$product->slug)}}" class="product-name">    
+                            <a href="{{url('product/'.$product->slug)}}" class="product-name">
                             @endif
                                 {{mb_strlen($product->name, 'UTF-8') > 50 ? mb_substr($product->name, 0, 50, 'UTF-8') . '....' : $product->name}}
                             </a>
@@ -159,7 +160,9 @@
         </div>
     </section>
     <!-- /Popular Product -->
+    @endif
 
+    @if(count($new_products) > 0)
     <!-- Popular Product -->
     <section class="product-section">
         <div class="container">
@@ -192,7 +195,7 @@
                             @if ($product->is_variable == true)
                             <a href="{{url('variable-product/'.$product->slug)}}" class="product-name">
                             @else
-                            <a href="{{url('product/'.$product->slug)}}" class="product-name">    
+                            <a href="{{url('product/'.$product->slug)}}" class="product-name">
                             @endif
                                 {{mb_strlen($product->name, 'UTF-8') > 50 ? mb_substr($product->name, 0, 50, 'UTF-8') . '....' : $product->name}}
                             </a>
@@ -220,7 +223,9 @@
         </div>
     </section>
     <!-- /Popular Product -->
+    @endif
 
+    @if(count($regular_products) > 0)
     <!-- Popular Product -->
     <section class="product-section">
         <div class="container">
@@ -253,7 +258,7 @@
                             @if ($product->is_variable == true)
                             <a href="{{url('variable-product/'.$product->slug)}}" class="product-name">
                             @else
-                            <a href="{{url('product/'.$product->slug)}}" class="product-name">    
+                            <a href="{{url('product/'.$product->slug)}}" class="product-name">
                             @endif
                                 {{mb_strlen($product->name, 'UTF-8') > 50 ? mb_substr($product->name, 0, 50, 'UTF-8') . '....' : $product->name}}
                             </a>
@@ -281,7 +286,9 @@
         </div>
     </section>
     <!-- /Popular Product -->
+    @endif
 
+    @if(count($discount_products) > 0)
      <!-- Popular Product -->
     <section class="product-section">
         <div class="container">
@@ -314,7 +321,7 @@
                             @if ($product->is_variable == true)
                             <a href="{{url('variable-product/'.$product->slug)}}" class="product-name">
                             @else
-                            <a href="{{url('product/'.$product->slug)}}" class="product-name">    
+                            <a href="{{url('product/'.$product->slug)}}" class="product-name">
                             @endif
                                 {{mb_strlen($product->name, 'UTF-8') > 50 ? mb_substr($product->name, 0, 50, 'UTF-8') . '....' : $product->name}}
                             </a>
@@ -342,6 +349,7 @@
         </div>
     </section>
     <!-- /Popular Product -->
+    @endif
 
     <!-- Bottom Banner -->
     <section class="pt-5 pb-5">
