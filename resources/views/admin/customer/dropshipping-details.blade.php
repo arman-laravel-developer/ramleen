@@ -105,11 +105,11 @@
                                                     <option selected disabled>No Color</option>
                                                     @foreach ($orderDetail->product?->colors as $color)
                                                     <option value="{{ $color->color }}">{{ $color->color }}</option>
-                                                    @endforeach  
+                                                    @endforeach
                                                 @else
                                                     @foreach ($orderDetail->product?->colors as $color)
                                                     <option value="{{ $color->color }}" {{ $color->color == $orderDetail->color ? 'selected' : '' }}>{{ $color->color }}</option>
-                                                    @endforeach    
+                                                    @endforeach
                                                 @endif
                                             </select>
                                         </td>
@@ -248,8 +248,6 @@
                                     <div class="col-md-6">
                                         <select name="payment_gateway" id="payment_gateway" class="form-control" required>
                                             <option selected disabled>-- Select Payment Gateway--</option>
-                                            <option value="01814812233(bkash)" @if ($order->payment_gateway == "01814812233(bkash)") selected @endif>01814812233(bkash)</option>
-                                            <option value="01841539963(nagad)" @if ($order->payment_gateway == "01841539963(nagad)") selected @endif>01841539963(nagad)</option>
                                             <option value="wallet" @if ($order->payment_gateway == "wallet") selected @endif>wallet</option>
                                         </select>
                                     </div>
